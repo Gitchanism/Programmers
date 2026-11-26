@@ -1,3 +1,9 @@
+/*
+- SELECT문 콤마 빠뜨리지 말고 잘 쓰자
+- ON절에서 테이블 별칭을 잘 쓰자
+- 날짜 형식 변환은 TO_CHAR(컬럼명, 'YYYY-MM-DD')로 하자
+*/
+
 SELECT B.TITLE, B.BOARD_ID, R.REPLY_ID, R.WRITER_ID, R.CONTENTS, TO_CHAR(R.CREATED_DATE, 'YYYY-MM-DD')
 FROM USED_GOODS_BOARD B
 JOIN USED_GOODS_REPLY R
