@@ -1,0 +1,11 @@
+/*
+- ORACLE 상위 N개 추출 -> FETCH FIRST 사용하기
+    - FETCH FIRST(생략 가능) N ROWS(단수,복수 둘 다 가능) ONLY or WITH TIES
+    - 앞 줄 건너뛰기는 OFFSET 사용
+        - OFFSET N ROWS
+*/
+
+SELECT *
+FROM FOOD_PRODUCT
+ORDER BY PRICE DESC
+FETCH FIRST 1 ROW WITH TIES;
