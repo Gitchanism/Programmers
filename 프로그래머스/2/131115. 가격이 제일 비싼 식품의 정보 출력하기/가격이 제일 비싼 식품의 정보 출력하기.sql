@@ -3,6 +3,15 @@
     - FETCH FIRST(생략 가능) N ROWS(단수,복수 둘 다 가능) ONLY or WITH TIES
     - 앞 줄 건너뛰기는 OFFSET 사용
         - OFFSET N ROWS
+        
+- 두 번째 풀이
+
+SELECT PRODUCT_ID, PRODUCT_NAME, PRODUCT_CD, CATEGORY, PRICE
+FROM FOOD_PRODUCT
+WHERE PRICE = (
+      SELECT MAX(PRICE)
+      FROM FOOD_PRODUCT
+      );
 */
 
 SELECT *
